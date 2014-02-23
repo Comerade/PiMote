@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="pimoteApp">
 <head>
     <meta charset="UTF-8">
     <title>PiMote</title>
@@ -9,19 +9,33 @@
 </head>
 <body>
     <div class="container">
-
+        <div ng-controller="ChannelController">
+            <ul>
+                <li ng-repeat="channel in Channels">{{ channel.name }}</li>
+            </ul>
+        </div>
     </div>
     <div id="footer">
         <div class="col-xs-12 navbar-inverse navbar-fixed-bottom">
-            <div class="row" id="bottomNav">
-                <div class="col-xs-3"><a href="#"><i class="fa fa-home"></i><br>Home</a></div>
-                <div class="col-xs-3"><a href="#"><i class="fa fa-th"></i><br>Remote</a></div>
-                <div class="col-xs-3"><a href="#"><i class="fa fa-list-alt"></i><br>Channels</a></div>
-                <div class="col-xs-3"><a href="#"><i class="fa fa-cog"></i><br>Settings</a></div>
+            <div class="container" id="bottomNav">
+                <div class="col-xs-3 text-center"><a href="#"><i class="fa fa-home"></i><br>Home</a></div>
+                <div class="col-xs-3 text-center"><a href="#"><i class="fa fa-th"></i><br>Remote</a></div>
+                <div class="col-xs-3 text-center"><a href="#"><i class="fa fa-list-alt"></i><br>Channels</a></div>
+                <div class="col-xs-3 text-center"><a href="#"><i class="fa fa-cog"></i><br>Settings</a></div>
             </div>
         </div>
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
+    <script>
+        var app = angular.module('pimoteApp', []);
+
+        app.controller('ChannelController', function($scope, $http){
+            $http.get('/api/channel/').success(function(data){
+                $scope.Channels = data
+            })
+        })
+    </script>
 </body>
 </html>
