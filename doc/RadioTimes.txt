@@ -54,10 +54,15 @@ Channel Id's
 2603: "True Entertainment"
 2685: "Sky Atlantic"
 5072: "Movie Mix"
-5074: "more&gt;movies"
+5074: "more>movies"
 5097: "Drama"
 
 Api endpoint
 
 curl "http://www.radiotimes.com/rt-service/schedule/get?startDate=23-02-2014%2001:00:00&hours=3&totalWidthUnits=720&channels=26,40,45,47,94,105,131,132,134,147,158,160,180,182,185,197,213,248,262,264,288,292,482,483,801,922,1061,1201,1461,1601,1859,1882,1959,1961,1963,1981,2008,2050,2056,2062,2115,2122,2134,2179,2185,2189,2212,2603,2685,5072,5074,5097"
 
+Bleb
+
+Not a full list but offical API
+
+http://bleb.org/tv/data/listings/
