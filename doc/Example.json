@@ -1,0 +1,161 @@
+{
+  "Legend": {
+    "NextTvListingChannel": "0",
+    "PreviousTvListingChannel": "0",
+    "PreviousTvListingPeriod": "25-02-2014 18:00:00",
+    "NextTvListingPeriod": "26-02-2014 00:00:00",
+    "CurrentTimePeriodIdentifier": "9PM",
+    "CurrentTimePeriodItems": [
+      "9PM",
+      "10PM",
+      "11PM"
+    ],
+    "HoursRepresented": 3
+  },
+  "Channels": [
+    {
+      "DisplayName": "ITV",
+      "TvListings": [
+        {
+          "IsPickForProvider": [],
+          "RelativeSize": 240,
+          "ContinuationState": "continued",
+          "Image": "http://www.radiotimes.com/remote/static.radiotimes.com.edgesuite.net/pa/79/78/webANXliveuefamanu25.jpg?quality=60&amp;mode=crop&amp;width=130&amp;height=100&amp;404=tv",
+          "Description": "Olympiakos v Manchester United (Kick-off 7.45pm). Adrian Chiles presents coverage of the last-16 first-leg tie at the Karaiskakis Stadium between the Greek and English champions. While United have struggled for form domestically this term, they have saved some of their best performances of the season so far for Europe, topping their group ahead of Bayer Leverkusen, Shakhtar Donetsk and Real Sociedad, and they will expect to progress from this tie. With commentary by Clive Tyldesley and Andy Townsend, and analysis from Roy Keane and Lee Dixon.",
+          "EpisodePositionInSeries": null,
+          "IsNewSeries": false,
+          "IsRepeat": false,
+          "EndTimeMF": "2014-02-25 22:00:00Z",
+          "StartTimeMF": "2014-02-25 19:30:00Z",
+          "EndTime": "10pm",
+          "StartTime": "7:30pm",
+          "FilmStarRating": null,
+          "Title": "Live UEFA Champions League",
+          "EpisodeId": "cs5wyt",
+          "ProgrammeId": "cm4tvk",
+          "Link": "/episode/cs5wyt/live-uefa-champions-league--olympiakos-v-manchester-united",
+          "Specialisation": "tv",
+          "IsTvChoice": false
+        },
+        {
+          "IsPickForProvider": [],
+          "RelativeSize": 120,
+          "ContinuationState": "",
+          "Image": "http://www.radiotimes.com/remote/static.radiotimes.com.edgesuite.net/pa/77/25/webANXITVnews2013a.jpg?quality=60&amp;mode=crop&amp;width=130&amp;height=100&amp;404=tv",
+          "Description": null,
+          "EpisodePositionInSeries": null,
+          "IsNewSeries": false,
+          "IsRepeat": false,
+          "EndTimeMF": "2014-02-25 22:30:00Z",
+          "StartTimeMF": "2014-02-25 22:00:00Z",
+          "EndTime": "10:30pm",
+          "StartTime": "10pm",
+          "FilmStarRating": null,
+          "Title": "ITV News at Ten and Weather",
+          "EpisodeId": "cs472k",
+          "ProgrammeId": "nnc",
+          "Link": "/episode/cs472k/itv-news-at-ten-and-weather--25022014",
+          "Specialisation": "tv",
+          "IsTvChoice": false
+        },
+        {
+          "IsPickForProvider": [],
+          "RelativeSize": 20,
+          "ContinuationState": "",
+          "Image": "http://www.radiotimes.com/remote/static.radiotimes.com.edgesuite.net/pa/47/28/webANXITVnews2013gen3.jpg?quality=60&amp;mode=crop&amp;width=130&amp;height=100&amp;404=tv",
+          "Description": null,
+          "EpisodePositionInSeries": null,
+          "IsNewSeries": false,
+          "IsRepeat": false,
+          "EndTimeMF": "2014-02-25 22:35:00Z",
+          "StartTimeMF": "2014-02-25 22:30:00Z",
+          "EndTime": "10:35pm",
+          "StartTime": "10:30pm",
+          "FilmStarRating": null,
+          "Title": "ITV News London",
+          "EpisodeId": "cs472j",
+          "ProgrammeId": "tvc72",
+          "Link": "/episode/cs472j/itv-news-london--25022014",
+          "Specialisation": "tv",
+          "IsTvChoice": false
+        },
+        {
+          "IsPickForProvider": [],
+          "RelativeSize": 240,
+          "ContinuationState": "",
+          "Image": "http://www.radiotimes.com/remote/static.radiotimes.com.edgesuite.net/pa/05/91/webANXliveuefamanu252.jpg?quality=60&amp;mode=crop&amp;width=130&amp;height=100&amp;404=tv",
+          "Description": "Olympiakos v Manchester United and Zenit St Petersburg v Borussia Dortmund. Adrian Chiles presents action from the last-16 first-leg encounters at the Karaiskakis Stadium and the Petrovsky Stadium. United and Dortmund went into their ties as the favourites to reach the quarter-finals, but both faced tricky away trips before next month&#39;s return legs. With commentary by Clive Tyldesley and Andy Townsend, and analysis by Lee Dixon.",
+          "EpisodePositionInSeries": null,
+          "IsNewSeries": false,
+          "IsRepeat": false,
+          "EndTimeMF": "2014-02-25 23:35:00Z",
+          "StartTimeMF": "2014-02-25 22:35:00Z",
+          "EndTime": "11:35pm",
+          "StartTime": "10:35pm",
+          "FilmStarRating": null,
+          "Title": "UEFA Champions League: Extra Time",
+          "EpisodeId": "cs5wys",
+          "ProgrammeId": "dxjp",
+          "Link": "/episode/cs5wys/uefa-champions-league-extra-time--olympiakos-v-manchester-united-and-zenit-st-petersburg-v-borussia-dortmund",
+          "Specialisation": "tv",
+          "IsTvChoice": false
+        },
+        {
+          "IsPickForProvider": [],
+          "RelativeSize": 100,
+          "ContinuationState": "continues",
+          "Image": "http://www.radiotimes.com/remote/static.radiotimes.com.edgesuite.net/pa/91/40/webANXnicolaadamssports.jpg?quality=60&amp;mode=crop&amp;width=130&amp;height=100&amp;404=tv",
+          "Description": "A profile of the Leeds-born boxer, who won the first Olympic women&#39;s boxing gold medal in history with her victory at London 2012. Adams won the flyweight title by beating world number one Ren Cancan, and was awarded an MBE for services to boxing in the subsequent New Year Honours List. Including contributions from her family and trainer.",
+          "EpisodePositionInSeries": "4/8. ",
+          "IsNewSeries": false,
+          "IsRepeat": false,
+          "EndTimeMF": "2014-02-26 00:30:00Z",
+          "StartTimeMF": "2014-02-25 23:35:00Z",
+          "EndTime": "12:30am",
+          "StartTime": "11:35pm",
+          "FilmStarRating": null,
+          "Title": "Sports Life Stories",
+          "EpisodeId": "cp5hjs",
+          "ProgrammeId": "spwps",
+          "Link": "/episode/cp5hjs/sports-life-stories--series-2---4-nicola-adams-sports-life-stories",
+          "Specialisation": "tv",
+          "IsTvChoice": false
+        }
+      ],
+      "Packages": [
+        {
+          "Package": "Freeview",
+          "EpgChannel": "3"
+        },
+        {
+          "Package": "Sky",
+          "EpgChannel": "103"
+        },
+        {
+          "Package": "Virgin",
+          "EpgChannel": "103"
+        },
+        {
+          "Package": "Freesat",
+          "EpgChannel": "103"
+        },
+        {
+          "Package": "YouView",
+          "EpgChannel": "3"
+        },
+        {
+          "Package": "BT Vision",
+          "EpgChannel": "3"
+        },
+        {
+          "Package": "Sky HD",
+          "EpgChannel": "103"
+        }
+      ],
+      "Id": "26",
+      "Media": 0,
+      "WatchNow": "http://www.itv.com/itv",
+      "Key": "hkvp"
+    }
+  ]
+}
