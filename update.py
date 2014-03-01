@@ -34,11 +34,14 @@ for channel in data['Channels']:
         start = dateutil.parser.parse(show['StartTimeMF'])
         end = dateutil.parser.parse(show['EndTimeMF'])
 
-        if(Show.query.filter(Show.channelId == channel['Id'], Show.title == show['Title'], Show.startTime == start).count() == 0):
+        c = Channel.query.filter_by(rtid=channel['Id']).first()
+
+
+        if(Show.query.filter(Show.channelId == c.channelId, Show.title == show['Title'], Show.startTime == start).count() == 0):
 
             print '{0} - {1}'.format(show['Title'], show['StartTimeMF'])
 
-            newShow = Show(channel['Id'],
+            newShow = Show(c.channelId,
                             show['Title'],
                             start,
                             end,
