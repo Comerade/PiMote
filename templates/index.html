@@ -11,7 +11,12 @@
     <div class="container">
         <div ng-controller="ChannelController">
             <ul>
-                <li ng-repeat="channel in Channels">{{ channel.name }}</li>
+                <li ng-repeat="channel in Channels">
+                    {{ channel.name }}
+                    <ul>
+                        <li ng-repeat="show in channel.shows">{{ show.title }}</li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
@@ -33,7 +38,7 @@
 
         app.controller('ChannelController', function($scope, $http){
             $http.get('/api/channel/').success(function(data){
-                $scope.Channels = data
+                $scope.Channels = data.channels
             })
         })
     </script>
