@@ -2,11 +2,13 @@ from sqlalchemy import Column, Integer, String, DateTime, Boolean, ForeignKey
 from sqlalchemy.orm import relationship, backref
 from database import Base
 
+
 def jsonDatetime(value):
     """Deserialize datetime object into string form for JSON processing."""
     if value is None:
         return None
-    return [value.strftime("%Y-%m-%d"), value.strftime("%H:%M:%S")]
+    return value.isoformat()
+    #value.strftime("%Y-%m-%d") + ' ' + value.strftime("%H:%M:%S")
 
 
 class Channel(Base):
@@ -26,15 +28,15 @@ class Channel(Base):
     def serialize(self):
         """Return object data in easily serializeable format"""
         return {
-            'channelId' : self.channelId,
-            'name'      : self.name,
-            'rtid'      : self.rtid,
-            'shows'     : self.serializedShows
+            'channelId': self.channelId,
+            'name': self.name,
+            'rtid': self.rtid,
+            'shows': self.serializedShows
         }
 
     @property
     def serializedShows(self):
-        return [ show.serialize for show in self.shows]
+        return [show.serialize for show in self.shows]
 
 
 class Show(Base):
@@ -66,12 +68,12 @@ class Show(Base):
     def serialize(self):
         """Return object data in easily serializeable format"""
         return {
-            'showId'        : self.showId,
-            'channelId'     : self.channelId,
-            'title'         : self.title,
-            'startTime'     : jsonDatetime(self.startTime),
-            'endTime'       : jsonDatetime(self.endTime),
-            'description'   : self.description,
-            'isNewSeries'   : self.isNewSeries,
-            'isRepeat'      : self.isRepeat
+            'showId': self.showId,
+            'channelId': self.channelId,
+            'title': self.title,
+            'startTime': jsonDatetime(self.startTime),
+            'endTime': jsonDatetime(self.endTime),
+            'description': self.description,
+            'isNewSeries': self.isNewSeries,
+            'isRepeat': self.isRepeat
         }

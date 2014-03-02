@@ -90,14 +90,45 @@
 }
 
 
-
-
-
-
 .sidebar-wrapper.active {
     left: 200px;
 }
 
 .wrapper.active {
     padding-left: 200px;
+}
+
+.schedule {
+    overflow-x: auto;
+
+    thead {
+        background: #B0CEE9;
+        th {
+            height: 50px;
+        }
+    }
+
+    .schedule-hour {
+    }
+
+    .schedule-channels, .schedule-shows {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+    }
+
+    .schedule-channel {
+        float: left;
+        width: 100%;
+        white-space: nowrap;
+    }
+    .schedule-show {
+        display: inline-block;
+        width: 200px;
+        height: 50px;
+        h4 {
+            font-size: 12px
+        }
+    }
 }
