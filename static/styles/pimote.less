@@ -98,17 +98,33 @@
     padding-left: 200px;
 }
 
-.schedule {
-    overflow-x: auto;
 
-    thead {
-        background: #B0CEE9;
-        th {
+
+.schedule {
+    overflow: hidden;
+    width: 2750px;
+
+    .schedule-header {
+        background: #b0cee9;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        white-space: nowrap;
+        li {
+            display: inline-block;
             height: 50px;
+            line-height: 50px;
         }
     }
 
     .schedule-hour {
+        width: 500px;
+        border-left: 1px solid #dbdbdb;
+        width: 500px;
+    }
+
+    .schedule-channelheader {
+        width: 150px;
     }
 
     .schedule-channels, .schedule-shows {
@@ -118,17 +134,37 @@
         display: inline-block;
     }
 
-    .schedule-channel {
+    .schedule-channelname {
+        background: #eee;
         float: left;
-        width: 100%;
-        white-space: nowrap;
+        width: 150px;
+        height: 50px;
     }
+
+    .schedule-channel {
+        height: 50px;
+        border-top: 1px solid #aaa;
+        border-bottom: 1px solid #aaa;
+    }
+
+    .schedule-shows {
+        float: left;
+        white-space: nowrap;
+        width: 2500px;
+    }
+
     .schedule-show {
         display: inline-block;
-        width: 200px;
         height: 50px;
+        border: 1px solid #eee;
         h4 {
             font-size: 12px
         }
+
     }
+}
+
+.text-ellipsis {
+    text-overflow: ellipsis;
+    overflow: hidden;
 }

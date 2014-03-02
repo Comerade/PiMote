@@ -11,14 +11,6 @@
 <body>
 	<div class="wrapper active">
 		<div class="sidebar-wrapper active" ng-controller="SidenavController">
-			<!--<div class="sidebar">
-				<div class="container" id="bottomNav">
-					<div class="col-xs-3 text-center"><a href="#"><i class="fa fa-home"></i><br>Home</a></div>
-					<div class="col-xs-3 text-center"><a href="#"><i class="fa fa-th"></i><br>Remote</a></div>
-					<div class="col-xs-3 text-center"><a href="#"><i class="fa fa-list-alt"></i><br>Channels</a></div>
-					<div class="col-xs-3 text-center"><a href="#"><i class="fa fa-cog"></i><br>Settings</a></div>
-				</div>
-			</div>-->
 			<ul class="sidebar-header">
 				<li class="sidebar-brand">
 					<a href="#" class="menu-toggle" ng-click="toggleMenu()">
@@ -57,38 +49,22 @@
 		<div class="page-content-wrapper">
 			<div class="container-fluid">
 				<div ng-controller="ChannelController" class="schedule-wrapper">
-					<!--<ul class="schedule-channels">
-						<li ng-repeat="channel in Channels" class="schedule-channel">
-							{{ channel.name }}
-							<ul class="schedule-shows">
-								<li ng-repeat="show in channel.shows" class="schedule-show">
-									<h4>{{ show.title }}</h4>
-									<span show></span
-								</li>
-							</ul>
-						</li>
-					</ul>-->
-					<table class="schedule">
-						<thead>
-							<th class="schedule-channelname">Channel</th>
-							<!--<th ng-repeat="" class="schedule-hour">{{  }}</th>-->
-						</thead>
-						<tbody>
-							<tr ng-repeat="channel in Channels">
-								<td>
-									{{ channel.name }}
-								</td>
-								<td colspan="6">
-									<div class="schedule-channel">
-										<div ng-repeat="show in channel.shows | nowFilter" class="schedule-show">
-											<div show></div>
-										</div>
-									</div>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
+          <div class="schedule">
+            <ul class="schedule-header">
+              <li class="schedule-channelheader">Channel</li><li ng-repeat="hour in showHours()" class="schedule-hour">{{ hour }}</li>
+            </ul>
+            <div class="">
+              <div ng-repeat="channel in Channels" class="schedule-channel clearfix">
+                <div class="schedule-channelname">{{ channel.name }}</div>
+                <div class="schedule-shows">
+                  <div ng-repeat="show in channel.shows | nowFilter" class="schedule-show" style="{{ getShowWidth(show) }}">
+                    <div show></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 			</div>
 		</div>
 	</div>
@@ -104,15 +80,37 @@
 				$scope.Channels = data.channels
 			})
 
+      $scope.showHours = function(){
+        var d = new Date().getHours()
+        return [d - 1, d, d + 1, d + 2, d + 3]
+      }
+
+      $scope.getShowWidth = function(show){
+        var start = new Date(show.startTime),
+            end = new Date(show.endTime),
+            viewportStart = new Date()
+            minutePx = 500 / 60,
+            width = ((end - start) / 1000 / 60) * minutePx,
+            offset = 0;
+
+        if((viewportStart.getHours() - 1) > start.getHours()){
+          var clampedTime = viewportStart.setMinutes(0) - (viewportStart.getTime() - viewportStart.setSeconds(0)) - (1000 * 60 * 60)
+          offset = ((start - clampedTime) / 1000 / 60) * minutePx;
+        }
+        // margin-left:' + Math.floor(offset) + 'px;
+        return 'width: ' + Math.min((Math.floor(width) + Math.floor(offset)), 2500) + 'px;';
+      }
+
 		}).directive('show', function(){
 			return {
-				template: "<span>{{ show.startTime | date: 'HH:mm a' }}</span> - <span>{{ show.title }}</span"
+				template:'<div class="schedule-show-title text-ellipsis">{{ show.title }}</div><div class="text-ellipsis">{{ show.startTime | date: "HH:mm a" }} - {{ show.endTime | date: "HH:mm a" }}</div>'
 			}
 		}).filter('nowFilter', function(){
       return function(input){
         var filterList = []
         angular.forEach(input, function(show, i, shows){
-          if(new Date(show.startTime).getTime() > Date.now()){
+          if(new Date(show.startTime).getTime() >= (new Date().setMinutes(0)) - (1000 * 60 * 60) ||
+             new Date(show.endTime).getTime() >= (new Date().setMinutes(0)) - (1000 * 60 * 60)) {
             filterList.push(show)
           }
         })
