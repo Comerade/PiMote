@@ -1,11 +1,11 @@
 import json
 import urllib2
-import time
 import dateutil.parser
 import re
 from model.models import Channel, Show
 from model.database import db_session
 from htmlentitydefs import name2codepoint
+from datetime import datetime, timedelta
 
 # for some reason, python 2.5.2 doesn't have this one (apostrophe)
 name2codepoint['#39'] = 39
@@ -25,7 +25,7 @@ channels = [26, 40, 45, 47, 94, 105, 131, 132, 134, 147, 158, 160, 180, 182, 185
 
 
 # 23-02-2014%2001:00:00
-startdate = time.strftime("%d-%m-20%y %H:00:00")
+startdate = (datetime.now() - timedelta(hours=2)).strftime("%d-%m-20%y %H:00:00")
 startdate = startdate.replace(' ', '%20')
 
 

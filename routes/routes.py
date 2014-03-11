@@ -19,7 +19,8 @@ class ChannelListResource(Resource):
     parser.add_argument('name', type=str)
 
     def get(self):
-        return jsonify(channels=[i.serialize for i in Channel.query.all()])
+        result = Channel.query.all()
+        return jsonify(channels=[i.serialize for i in result])
 
     def post(self):
         args = self.parser.parse_args()
