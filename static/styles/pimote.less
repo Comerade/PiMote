@@ -17,12 +17,12 @@
     -o-transition: all .4s ease 0s;
     -ms-transition: all .4s ease 0s;
     transition: all .4s ease 0s;
-}
 
-.sidebar-wrapper ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
 }
 
 #header-icon {
@@ -62,23 +62,24 @@
     list-style: none;
     margin: 0;
     padding: 0;
+
+    li {
+        line-height: 40px;
+        text-indent: 20px;
+        a:hover {
+            color: #FFF;
+            background: rgba(255, 255, 255, 0.2);
+            text-decoration: none;
+        }
+    }
 }
 
-.sidebar-nav li {
-    line-height: 40px;
-    text-indent: 20px;
-}
 
 .sidebar-nav li, .sidebar-header li {
     line-height: 40px;
     text-indent: 20px;
 }
 
-.sidebar-nav li a:hover {
-    color: #FFF;
-    background: rgba(255, 255, 255, 0.2);
-    text-decoration: none;
-}
 
 .sidebar-icon {
     float: right;
@@ -121,9 +122,11 @@
         width: 500px;
         border-left: 1px solid #dbdbdb;
         width: 500px;
+        text-align: center;
     }
 
     .schedule-channelheader {
+        text-align: center;
         width: 150px;
     }
 
@@ -139,6 +142,7 @@
         float: left;
         width: 150px;
         height: 50px;
+        text-align: center;
     }
 
     .schedule-channel {
@@ -157,8 +161,14 @@
         display: inline-block;
         height: 50px;
         border-left: 1px solid #eee;
+        padding: 5px;
         h4 {
             font-size: 12px
+        }
+
+        > div {
+            border-left: 5px solid #5490B3;
+            padding-left: 8px;
         }
 
     }

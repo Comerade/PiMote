@@ -29,7 +29,7 @@ startdate = (datetime.now() - timedelta(hours=2)).strftime("%d-%m-20%y %H:00:00"
 startdate = startdate.replace(' ', '%20')
 
 
-req = urllib2.urlopen(baseurl.format(startdate, 2, ','.join([str(x) for x in channels])))
+req = urllib2.urlopen(baseurl.format(startdate, 5, ','.join([str(x) for x in channels])))
 data = json.load(req)
 
 addedChan = 0
