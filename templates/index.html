@@ -50,7 +50,8 @@
 				<div ng-controller="ChannelController" class="schedule-wrapper">
           <div class="schedule">
             <ul class="schedule-header">
-              <li class="schedule-channelheader">Channel</li><li ng-repeat="hour in showHours()" class="schedule-hour">{{ hour }}</li>
+              <li class="schedule-channelheader">Channel</li>
+              <li ng-repeat="hour in showHours()" class="schedule-hour">{{ hour }}:00</li>
             </ul>
             <div class="">
               <div ng-repeat="channel in Channels" class="schedule-channel clearfix">
