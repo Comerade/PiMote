@@ -113,11 +113,16 @@
         white-space: nowrap;
         border: 1px solid #bbb;
         li {
-            display: inline-block;
+            float: left;
             height: 50px;
             line-height: 50px;
             color: #333;
             font-weight: bold;
+        }
+        &:after {
+            content: '';
+            clear: both;
+            display: table;
         }
     }
 
